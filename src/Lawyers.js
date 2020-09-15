@@ -37,7 +37,7 @@ const lawyerRows = (lawyers, selectLawyer, selectedLawyerId) => {
         <td>{currency.format(byStatus[WON].value)}</td>
         <td>{currency.format(byStatus[LOST].value)}</td>
         <td>
-          {selectedLawyerId == id ? null : (
+          {selectedLawyerId === id ? null : (
             <button
               className="button is-small"
               onClick={() => selectLawyer(id)}

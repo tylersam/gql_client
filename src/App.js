@@ -4,7 +4,7 @@ import Lawyers from "./Lawyers"
 import Lawyer from "./Lawyer"
 
 function App() {
-  const [lawyerId, setLawyerId] = useState(0)
+  const [lawyerId, setLawyerId] = useState()
 
   return (
     <div className="columns">
