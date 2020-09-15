@@ -1,15 +1,21 @@
-import React from "react"
+import React, { useState } from "react"
 import "./App.css"
-import { ApolloProvider } from "@apollo/client"
 import Lawyers from "./Lawyers"
+import Lawyer from "./Lawyer"
 
-function App({ client }) {
+function App() {
+  const [lawyerId, setLawyerId] = useState(0)
+
   return (
-    <ApolloProvider client={client}>
-      <div>
-        <Lawyers />
+    <div className="columns">
+      <div className="column">
+        <Lawyers selectLawyer={setLawyerId} selectedLawyerId={lawyerId} />
       </div>
-    </ApolloProvider>
+
+      <div className="column">
+        <Lawyer id={lawyerId} />
+      </div>
+    </div>
   )
 }
 
